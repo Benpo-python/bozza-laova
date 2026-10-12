@@ -1,5 +1,9 @@
 /* Plateforme LAOVA — comportements légers (menu, apparitions, formulaires) */
 document.documentElement.classList.add('js');
+var EN = document.documentElement.lang === 'en';
+var T = EN
+  ? { menu: 'Menu', close: 'Close', sending: 'Sending…', ok: 'Thank you. Your message has been sent to the LAOVA team.', err: 'Your message could not be sent. Please try again in a moment.' }
+  : { menu: 'Menu', close: 'Fermer', sending: 'Envoi en cours…', ok: 'Merci. Votre message a bien été transmis à l’équipe LAOVA.', err: 'L’envoi n’a pas abouti. Merci de réessayer dans quelques instants.' };
 
 (function menu() {
   var btn = document.querySelector('.nav-toggle');
@@ -7,7 +11,7 @@ document.documentElement.classList.add('js');
   btn.addEventListener('click', function () {
     var open = document.body.classList.toggle('menu-open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.querySelector('span').textContent = open ? 'Fermer' : 'Menu';
+    btn.querySelector('span').textContent = open ? T.close : T.menu;
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && document.body.classList.contains('menu-open')) btn.click();
@@ -43,7 +47,7 @@ document.documentElement.classList.add('js');
       });
       if (data.email) data.replyto = data.email;
       btn.disabled = true;
-      status.textContent = 'Envoi en cours…';
+      status.textContent = T.sending;
       fetch(form.action, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -53,10 +57,10 @@ document.documentElement.classList.add('js');
         .then(function (res) {
           if (!res.success) throw new Error(res.message);
           form.reset();
-          status.textContent = form.dataset.ok || 'Merci. Votre message a bien été transmis à l’équipe LAOVA.';
+          status.textContent = form.dataset.ok || T.ok;
         })
         .catch(function () {
-          status.textContent = 'L’envoi n’a pas abouti. Merci de réessayer dans quelques instants.';
+          status.textContent = T.err;
         })
         .then(function () { btn.disabled = false; });
     });
