@@ -488,3 +488,4 @@ fieldset.field { border: 0; padding: 0; margin: 0; }
   .nav .lang { font-family: var(--mono); font-size: .85rem; width: auto; margin-top: 14px; padding: 10px 14px; border: 1px solid var(--line-strong); }
 }
 html[lang="en"] .hero-text h1 { font-size: clamp(2.3rem, 1.4rem + 2.9vw, 4.1rem); }
+.entry .word-caps { font-style: normal; letter-spacing: .08em; }
