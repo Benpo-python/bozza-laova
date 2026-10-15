@@ -66,3 +66,21 @@ var T = EN
     });
   });
 })();
+
+/* Carte Google Maps : chargée seulement au clic */
+(function maps() {
+  document.querySelectorAll('.map-embed').forEach(function (box) {
+    var btn = box.querySelector('button');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = box.dataset.src;
+      f.loading = 'lazy';
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      f.title = 'Google Maps — Maroantsetra';
+      box.innerHTML = '';
+      box.appendChild(f);
+      box.classList.add('is-loaded');
+    });
+  });
+})();
