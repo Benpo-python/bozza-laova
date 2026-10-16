@@ -533,3 +533,6 @@ body.menu-open .wa { display: none; }
   .team { grid-template-columns: 1fr; }
   .member + .member { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
 }
+
+/* Fiches d'initiatives passées (sans photo) */
+.project-past .year { font-size: clamp(3.5rem, 2rem + 5vw, 7rem); line-height: .9; color: var(--ravinala); font-style: italic; }
