@@ -21,9 +21,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/css/laova.css?v=e68be2e9">
+<link rel="stylesheet" href="../../assets/css/laova.css?v=81cbd450">
 </head>
-<body>
+<body class="">
 <a class="skip" href="#contenu">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
@@ -53,7 +53,7 @@
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav"><span>Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main navigation">
-      <a href="../plateforme/">About us</a><a href="../missions/">Missions</a><a href="../projets/" aria-current="page">Projects</a><a href="../ferme/">The farm</a><a href="../hasina/">Hasina Immersion</a><a href="../recits/">Stories</a><a class="nav-cta" href="../cooperer/">Partner with us</a><a class="lang" href="../../projets/" hreflang="fr" lang="fr" title="Version française" aria-label="Version française">FR</a>
+      <div class="nav-group"><button class="nav-parent" type="button" aria-expanded="false" aria-controls="sub-0">About</button><div class="nav-sub" id="sub-0"><a href="../plateforme/">Who we are</a><a href="../plateforme/#vision">Vision and missions</a><a href="../plateforme/#equipe">Our team and governance</a><a href="../plateforme/#territoire">Our territory</a></div></div><div class="nav-group is-current"><button class="nav-parent" type="button" aria-expanded="false" aria-controls="sub-1">Our work</button><div class="nav-sub" id="sub-1"><a href="../missions/">The six areas of action</a><a href="../projets/">Projects and achievements</a><a href="../projet-ressources-vegetales/">Penja, Raffia and Ravinala</a><a href="../ferme/">LAOVA Community Farm</a></div></div><a class="nav-link" href="../ferme/">The farm</a><a class="nav-link" href="../hasina/">Hasina Immersion</a><div class="nav-group"><button class="nav-parent" type="button" aria-expanded="false" aria-controls="sub-4">Stories & resources</button><div class="nav-sub" id="sub-4"><a href="../recits/#carnet">Field stories</a><a href="../recits/#ressources">Documentary resources</a><a href="../recits/#archives">Publications and archives</a></div></div><div class="nav-group nav-group-cta"><button class="nav-parent" type="button" aria-expanded="false" aria-controls="sub-5">Partner with us</button><div class="nav-sub" id="sub-5"><a href="../cooperer/">Partnerships</a><a href="../contact/">Contact</a></div></div><a class="lang" href="../../projets/" hreflang="fr" lang="fr" title="Version française" aria-label="Version française">FR</a>
     </nav>
   </div>
 </header>
@@ -68,15 +68,10 @@
 
 <section class="section-tight">
   <div class="wrap">
-    <p class="meta" style="margin-bottom:12px">Reading the statuses</p>
-    <div class="legend">
-      <span class="status s-conception">In design</span>
-      <span class="status s-preparation">In preparation</span>
-      <span class="status s-cours">Ongoing</span>
-      <span class="status s-acheve">Completed</span>
-    </div>
+    <p class="meta" style="margin-bottom:12px" id="filtres-label">Filter by status</p>
+    <div class="legend filters" role="group" aria-labelledby="filtres-label"><button type="button" class="chip is-on" data-filter="all" aria-pressed="true">All</button><button type="button" class="chip" data-filter="cours" aria-pressed="false">Ongoing</button><button type="button" class="chip" data-filter="preparation" aria-pressed="false">In preparation</button><button type="button" class="chip" data-filter="conception" aria-pressed="false">In design</button><button type="button" class="chip" data-filter="acheve" aria-pressed="false">Completed</button></div>
     <div class="projects" style="margin-top:48px">
-      <a class="project" href="../hasina/">
+      <a class="project" data-status="cours" href="../hasina/">
         <img src="../../assets/img/toiture-dialogue-m.jpg" srcset="../../assets/img/toiture-dialogue-m.jpg 1000w, ../../assets/img/toiture-dialogue-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="962" height="1000" alt="Working together on a woven leaf wall" loading="lazy" decoding="async">
         <div>
           <span class="status s-cours">Ongoing · since 2025</span>
@@ -85,7 +80,7 @@
           <dl><dt>Area</dt><dd>F · Intercultural encounter</dd><dt>Territory</dt><dd>Maroantsetra and its surroundings</dd><dt>Format</dt><dd>On request, subject to availability and local agreement</dd><dt>Updated</dt><dd>October 2026</dd></dl>
         </div>
       </a>
-      <a class="project" href="../projet-ressources-vegetales/">
+      <a class="project" data-status="preparation" href="../projet-ressources-vegetales/">
         <img src="../../assets/img/pepiniere-m.jpg" srcset="../../assets/img/pepiniere-m.jpg 1000w, ../../assets/img/pepiniere-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="1000" height="750" alt="Seedling nursery under a palm-leaf shade house" loading="lazy" decoding="async">
         <div>
           <span class="status s-preparation">In preparation</span>
@@ -94,7 +89,7 @@
           <dl><dt>Areas</dt><dd>B · Nature — A · Heritage — D · Development</dd><dt>Territory</dt><dd>Communes of Ankofabe, Sahasindro and Antanambe; districts of Maroantsetra and Mananara Nord</dd><dt>Framework</dt><dd>GEF Small Grants Programme (GEF SGP, OP8)</dd><dt>Agreement</dt><dd>UNDP/GEF SGP OP8 grant agreement signed; contract period from 1 October 2026 to 31 January 2029.</dd><dt>Updated</dt><dd>October 2026</dd></dl>
         </div>
       </a>
-      <a class="project" href="../ferme/">
+      <a class="project" data-status="preparation" href="../ferme/">
         <img src="../../assets/img/terre-laterite-m.jpg" srcset="../../assets/img/terre-laterite-m.jpg 1000w, ../../assets/img/terre-laterite-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="Cleared laterite soil on a slope" loading="lazy" decoding="async">
         <div>
           <span class="status s-preparation">In preparation</span>
@@ -103,7 +98,7 @@
           <dl><dt>Areas</dt><dd>C · Education — D · Development</dd><dt>Territory</dt><dd>Maroantsetra</dd><dt>Stage</dt><dd>Phase A — productive core; educational strand in design</dd><dt>Updated</dt><dd>October 2026</dd></dl>
         </div>
       </a>
-      <a class="project" href="../recits/">
+      <a class="project" data-status="conception" href="../recits/">
         <img src="../../assets/img/presse-ancienne-m.jpg" srcset="../../assets/img/presse-ancienne-m.jpg 1000w, ../../assets/img/presse-ancienne-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="Old mechanical press under a shelter" loading="lazy" decoding="async">
         <div>
           <span class="status s-conception">In design</span>
@@ -114,9 +109,9 @@
       </a>
     </div>
 
-    <p class="meta" style="margin:72px 0 12px">Completed initiatives</p>
+    <p class="meta past-label" id="realisees" style="margin:72px 0 12px">Completed initiatives</p>
     <div class="projects">
-      <article class="project project-past">
+      <article class="project project-past" data-status="acheve">
         <div class="year">2023</div>
         <div>
           <span class="status s-acheve">Completed</span>
@@ -125,7 +120,7 @@
           <dl><dt>Territory</dt><dd>Maroantsetra</dd><dt>Duration</dt><dd>Three days</dd></dl>
         </div>
       </article>
-      <article class="project project-past">
+      <article class="project project-past" data-status="acheve">
         <div class="year">2022</div>
         <div>
           <span class="status s-acheve">Completed</span>
@@ -212,6 +207,6 @@
   </div>
 </footer>
 <a class="wa" href="https://wa.me/261325065886?text=Hello%2C%20I%20would%20like%20to%20talk%20with%20the%20LAOVA%20team." target="_blank" rel="noopener" title="Chat with a team member on WhatsApp" aria-label="Chat with a team member on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4C9.4 4 4 9.1 4 15.4c0 2.3.7 4.4 2 6.2L4.6 27l5.6-1.5c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.1 12-11.5S22.6 4 16 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12.2 10.6c.3 0 .6 0 .8.6l.9 2.1c.1.3 0 .6-.2.8l-.7.8c-.2.2-.2.4 0 .7.9 1.5 2.1 2.6 3.7 3.3.3.1.5.1.7-.1l.9-1c.2-.3.5-.3.8-.2l2.1 1c.3.1.5.3.5.6 0 .9-.6 2-1.6 2.3-1 .3-2.4.2-4.3-.7-2.6-1.2-4.4-3.6-5-4.9-.6-1.2-.7-2.6 0-3.6.4-.6 1-1 1.4-1.1z" fill="currentColor"/></svg><span>Talk to the team</span></a>
-<script src="../../assets/js/laova.js?v=4d0eb027" defer></script>
+<script src="../../assets/js/laova.js?v=d1431da1" defer></script>
 </body>
 </html>

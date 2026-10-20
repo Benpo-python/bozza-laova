@@ -21,9 +21,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/laova.css?v=e68be2e9">
+<link rel="stylesheet" href="assets/css/laova.css?v=81cbd450">
 </head>
-<body>
+<body class="">
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header class="site-header">
   <div class="wrap">
@@ -53,7 +53,7 @@
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav"><span>Menu</span></button>
     <nav class="nav" id="nav" aria-label="Navigation principale">
-      <a href="plateforme/">Qui sommes-nous</a><a href="missions/">Missions</a><a href="projets/">Projets</a><a href="ferme/">La ferme</a><a href="hasina/">Hasina Immersion</a><a href="recits/">Récits</a><a class="nav-cta" href="cooperer/">Coopérer</a><a class="lang" href="en/" hreflang="en" lang="en" title="English version" aria-label="English version">EN</a>
+      <div class="nav-group"><button class="nav-parent" type="button" aria-expanded="false" aria-controls="sub-0">À propos</button><div class="nav-sub" id="sub-0"><a href="plateforme/">Qui sommes-nous</a><a href="plateforme/#vision">Vision et missions</a><a href="plateforme/#equipe">Notre équipe et gouvernance</a><a href="plateforme/#territoire">Notre territoire</a></div></div><div class="nav-group"><button class="nav-parent" type="button" aria-expanded="false" aria-controls="sub-1">Nos actions</button><div class="nav-sub" id="sub-1"><a href="missions/">Les six domaines d’action</a><a href="projets/">Projets et réalisations</a><a href="projet-ressources-vegetales/">Penja, Raphia et Ravinala</a><a href="ferme/">Ferme communautaire LAOVA</a></div></div><a class="nav-link" href="ferme/">La ferme</a><a class="nav-link" href="hasina/">Hasina Immersion</a><div class="nav-group"><button class="nav-parent" type="button" aria-expanded="false" aria-controls="sub-4">Récits & ressources</button><div class="nav-sub" id="sub-4"><a href="recits/#carnet">Récits de terrain</a><a href="recits/#ressources">Ressources documentaires</a><a href="recits/#archives">Publications et archives</a></div></div><div class="nav-group nav-group-cta"><button class="nav-parent" type="button" aria-expanded="false" aria-controls="sub-5">Coopérer</button><div class="nav-sub" id="sub-5"><a href="cooperer/">Partenariats</a><a href="contact/">Contact</a></div></div><a class="lang" href="en/" hreflang="en" lang="en" title="English version" aria-label="English version">EN</a>
     </nav>
   </div>
 </header>
@@ -66,27 +66,21 @@
         <h1><span>Préserver l’héritage.</span><span><em>Faire vivre</em> les savoirs.</span><span>Construire l’avenir.</span></h1>
         <p class="lede">Ancrée à Maroantsetra, la Plateforme LAOVA rassemble des énergies et des savoirs autour d’une conviction : préserver le patrimoine naturel et culturel de Madagascar, c’est faire vivre ses racines et construire son avenir, aux côtés des communautés qui en sont les gardiennes.</p>
         <div class="links">
-          <a class="link" href="plateforme/">Découvrir la plateforme</a>
-          <a class="link" href="projets/">Explorer nos projets</a>
+          <a class="btn" href="projets/">Découvrir nos projets →</a>
+          <a class="link" href="plateforme/">Comprendre LAOVA</a>
         </div>
       </div>
       <div class="hero-media">
         <figure class=""><img src="assets/img/tressage-mains-m.jpg" srcset="assets/img/tressage-mains-m.jpg 1000w, assets/img/tressage-mains-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="833" height="1000" alt="Tressage de lanières de raphia teintes, à même le sol" loading="lazy" decoding="async"><figcaption><span class="fig-n">Fig. 01</span><span>Tressage de lanières de raphia teintes, à même le sol — Maroantsetra, juillet 2026</span></figcaption></figure>
       </div>
     </div>
-    <dl class="facts">
-      <div><dt>Statut</dt><dd>Association – plateforme Malagasy à but non lucratif</dd></div>
-      <div><dt>Fondée</dt><dd>Le 2 juillet 2022 à Maroantsetra, par de jeunes ambitieux</dd></div>
-      <div><dt>Territoire</dt><dd>Baie d’Antongil, nord-est de Madagascar</dd></div>
-      <div><dt>Mandat</dt><dd>Héritage · culture · nature · transmission du patrimoine matériel et immatériel</dd></div>
-    </dl>
   </div>
 </section>
 
-<section class="rule">
+<section class="rule" id="en-bref">
   <div class="wrap">
     <div class="grid">
-      <div class="c-1-7 entry reveal">
+      <div class="c-1-6 entry reveal">
         <div class="word word-caps">LAOVA</div>
         <p class="gram gram-caps">Héritage</p>
         <ol>
@@ -94,8 +88,14 @@
           <li>Ce que nous choisissons de faire vivre et de transmettre.</li>
         </ol>
       </div>
-      <div class="c-9-12 reveal">
-        <p class="meta" style="margin-bottom:14px">Ce qui nous anime</p>
+      <div class="c-8-12 reveal">
+        <p class="eyebrow"><b>01</b><span>LAOVA en bref</span></p>
+        <p class="lede">Association – plateforme Malagasy à but non lucratif, fondée le 2 juillet 2022 à Maroantsetra par de jeunes ambitieux, LAOVA œuvre pour la sauvegarde et la transmission du patrimoine matériel et immatériel, culturel et naturel.</p>
+        <ul class="glance">
+          <li><span>Ancrage</span>Baie d’Antongil, nord-est de Madagascar</li>
+          <li><span>Mandat</span>Héritage · culture · nature · transmission</li>
+        </ul>
+        <p class="meta" style="margin:30px 0 10px">Ce qui nous anime</p>
         <p>Un héritage n’a d’avenir que s’il reste <em>vivant</em>. Il prend tout son sens dans les savoirs partagés, les terres préservées et les communautés qui le font vivre.</p>
         <a class="link" href="plateforme/#vision">Découvrir notre vision</a>
       </div>
@@ -103,83 +103,139 @@
   </div>
 </section>
 
-<section class="band">
+<section class="band" id="pourquoi">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow"><b>01</b><span>Un patrimoine vivant</span></p>
-      <h2>Une même fibre peut être à la fois ressource, savoir, revenu et matériau d’habitat.</h2>
-      <p>Le patrimoine ne se limite pas aux objets. Il tient dans les gestes, les récits, les usages et les ressources naturelles utilisées avec soin. Sa disparition n’est jamais une perte exclusivement naturelle ou exclusivement culturelle.</p>
+      <p class="eyebrow"><b>02</b><span>Pourquoi LAOVA</span></p>
+      <h2>Protéger un patrimoine, c’est garder vivants des savoirs, des pratiques, des ressources et des liens.</h2>
     </div>
-    <div class="triptych">
-      <figure class="ratio-tall reveal"><img src="assets/img/atelier-raphia-m.jpg" srcset="assets/img/atelier-raphia-m.jpg 1000w, assets/img/atelier-raphia-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="682" height="1000" alt="Préparation collective de fibres de raphia" loading="lazy" decoding="async"><figcaption><span class="fig-n">Fig. 02</span><span>Préparation collective de fibres de raphia — Maroantsetra, 2026</span></figcaption></figure>
-      <figure class="ratio-tall reveal"><img src="assets/img/charpente-collective-m.jpg" srcset="assets/img/charpente-collective-m.jpg 1000w, assets/img/charpente-collective-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="Montage d’une charpente en bois et en feuilles" loading="lazy" decoding="async"><figcaption><span class="fig-n">Fig. 03</span><span>Montage d’une charpente en bois et en feuilles — environs de Maroantsetra, 2026</span></figcaption></figure>
-      <figure class="ratio-sq reveal"><img src="assets/img/poisson-fume-m.jpg" srcset="assets/img/poisson-fume-m.jpg 1000w, assets/img/poisson-fume-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="1000" height="570" alt="Fumage du poisson sur claie, au feu de bois et de coques de coco" loading="lazy" decoding="async"><figcaption><span class="fig-n">Fig. 04</span><span>Fumage du poisson sur claie, au feu de bois et de coques de coco — baie d’Antongil, 2026</span></figcaption></figure>
+    <div class="zig reveal">
+      <figure class="ratio-land"><img src="assets/img/atelier-raphia-m.jpg" srcset="assets/img/atelier-raphia-m.jpg 1000w, assets/img/atelier-raphia-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="682" height="1000" alt="Préparation collective de fibres de raphia" loading="lazy" decoding="async"><figcaption><span class="fig-n">Fig. 02</span><span>Préparation collective de fibres de raphia — Maroantsetra, 2026</span></figcaption></figure>
+      <div class="zig-text">
+        <p class="meta">Ce que nous observons</p>
+        <h3>Le patrimoine culturel et le patrimoine naturel sont inséparables.</h3>
+        <p>Le patrimoine ne se limite pas aux objets : il tient dans les récits, les langues, les gestes artisanaux, les pratiques agricoles et les connaissances environnementales. Une même plante peut être à la fois une ressource écologique, une source de revenus, un matériau d’habitat et le support d’un savoir transmis de génération en génération.</p>
+        <p>Sa disparition n’est donc jamais une perte exclusivement naturelle ou exclusivement culturelle. Et sauvegarder ne consiste pas seulement à enregistrer des pratiques menacées : il faut préserver les conditions de leur continuité, reconnaître celles et ceux qui détiennent ces savoirs et faire une place aux jeunes.</p>
+      </div>
+    </div>
+    <div class="zig zig-rev reveal">
+      <figure class="ratio-land"><img src="assets/img/pilon-riz-m.jpg" srcset="assets/img/pilon-riz-m.jpg 1000w, assets/img/pilon-riz-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="525" height="1000" alt="Décorticage du riz au pilon, sous un abri" loading="lazy" decoding="async"><figcaption><span class="fig-n">Fig. 03</span><span>Décorticage du riz au pilon, sous un abri — environs de Maroantsetra, 2026</span></figcaption></figure>
+      <div class="zig-text">
+        <p class="meta">Notre réponse</p>
+        <h3>Relier les savoirs, les personnes et l’action concrète.</h3>
+        <p>LAOVA fonctionne comme une plateforme : pour chaque mission, elle mobilise les compétences adaptées, de la recherche à l’agriculture, de l’artisanat à l’éducation. Les communautés participent à la définition des initiatives qui les concernent ; leurs voix ne sont pas accessoires.</p>
+        <p>Notre approche relie la recherche, l’environnement, l’éducation et le développement communautaire, pour que la protection du patrimoine devienne un espace de dialogue, de participation et d’action.</p>
+        <a class="link" href="plateforme/">Qui sommes-nous</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section>
+<section id="domaines">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow"><b>02</b><span>Une plateforme, plusieurs expertises</span></p>
+      <p class="eyebrow"><b>03</b><span>Nos six domaines d’action</span></p>
       <h2>Une même mission, des compétences complémentaires.</h2>
-      <p>Documenter une mémoire, restaurer une ressource naturelle, accompagner une initiative productive ou transmettre un savoir-faire ne demandent pas les mêmes compétences. Chaque projet mobilise les personnes, les connaissances et les partenariats adaptés à sa réalité.</p>
+      <p>Documenter une mémoire, restaurer une ressource naturelle, accompagner une initiative productive ou transmettre un savoir-faire ne demandent pas les mêmes compétences. Chaque projet mobilise les personnes et les partenariats adaptés à sa réalité.</p>
     </div>
-    <ul class="index">
-      <li><a href="missions/#patrimoine"><span class="k">A</span><h3>Patrimoine, mémoire et recherche</h3><p>Mémoires orales, pratiques culturelles, architecture et artisanat traditionnels, documentés avec le consentement des détenteurs de savoirs.</p><span class="arr">→</span><img src="assets/img/tressage-couleurs-m.jpg" srcset="assets/img/tressage-couleurs-m.jpg 1000w, assets/img/tressage-couleurs-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="562" height="1000" alt="" loading="lazy" decoding="async" class="peek"></a></li>
-      <li><a href="missions/#nature"><span class="k">B</span><h3>Nature, biodiversité et ressources vivantes</h3><p>Relier écosystèmes, pratiques et moyens de subsistance ; protéger et restaurer les ressources végétales.</p><span class="arr">→</span><img src="assets/img/canal-zone-humide-m.jpg" srcset="assets/img/canal-zone-humide-m.jpg 1000w, assets/img/canal-zone-humide-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="" loading="lazy" decoding="async" class="peek"></a></li>
-      <li><a href="missions/#education"><span class="k">C</span><h3>Éducation et transmission des savoirs</h3><p>Rencontres entre générations, pédagogie de terrain et pratiques agricoles et artisanales.</p><span class="arr">→</span><img src="assets/img/riziere-repiquage-m.jpg" srcset="assets/img/riziere-repiquage-m.jpg 1000w, assets/img/riziere-repiquage-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="" loading="lazy" decoding="async" class="peek"></a></li>
-      <li><a href="missions/#developpement"><span class="k">D</span><h3>Développement communautaire et économie responsable</h3><p>Renforcer les capacités productives et l’autonomie des communautés en préservant les ressources.</p><span class="arr">→</span><img src="assets/img/poisson-seche-m.jpg" srcset="assets/img/poisson-seche-m.jpg 1000w, assets/img/poisson-seche-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="1000" height="555" alt="" loading="lazy" decoding="async" class="peek"></a></li>
-      <li><a href="missions/#numerique"><span class="k">E</span><h3>Documentation numérique, création et communication</h3><p>Archives, récits, photographies et vidéos, diffusés lorsque les détenteurs de savoirs l’autorisent.</p><span class="arr">→</span><img src="assets/img/presse-ancienne-m.jpg" srcset="assets/img/presse-ancienne-m.jpg 1000w, assets/img/presse-ancienne-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="" loading="lazy" decoding="async" class="peek"></a></li>
-      <li><a href="missions/#rencontre"><span class="k">F</span><h3>Rencontre interculturelle</h3><p>Hasina Immersion : une médiation culturelle et communautaire, non une offre de séjours.</p><span class="arr">→</span><img src="assets/img/toiture-dialogue-m.jpg" srcset="assets/img/toiture-dialogue-m.jpg 1000w, assets/img/toiture-dialogue-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="962" height="1000" alt="" loading="lazy" decoding="async" class="peek"></a></li>
-    </ul>
+    <div class="areas">
+      <a class="area" href="missions/#patrimoine"><img src="assets/img/tressage-couleurs-m.jpg" srcset="assets/img/tressage-couleurs-m.jpg 1000w, assets/img/tressage-couleurs-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="562" height="1000" alt="Lanières de raphia naturelles et teintes, en cours de tressage" loading="lazy" decoding="async"><span class="k">A</span><h3>Patrimoine, mémoire et recherche</h3><p>Mémoires orales, pratiques culturelles, architecture et artisanat, documentés avec le consentement des détenteurs de savoirs.</p></a>
+      <a class="area" href="missions/#nature"><img src="assets/img/canal-zone-humide-m.jpg" srcset="assets/img/canal-zone-humide-m.jpg 1000w, assets/img/canal-zone-humide-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="Canal traversant une zone humide cultivée" loading="lazy" decoding="async"><span class="k">B</span><h3>Nature, biodiversité et ressources vivantes</h3><p>Relier écosystèmes, pratiques et moyens de subsistance ; protéger et restaurer les ressources végétales.</p></a>
+      <a class="area" href="missions/#education"><img src="assets/img/riziere-repiquage-m.jpg" srcset="assets/img/riziere-repiquage-m.jpg 1000w, assets/img/riziere-repiquage-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="Repiquage du riz dans une parcelle inondée" loading="lazy" decoding="async"><span class="k">C</span><h3>Éducation et transmission des savoirs</h3><p>Rencontres entre générations, pédagogie de terrain, pratiques agricoles et artisanales.</p></a>
+      <a class="area" href="missions/#developpement"><img src="assets/img/poisson-seche-m.jpg" srcset="assets/img/poisson-seche-m.jpg 1000w, assets/img/poisson-seche-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="1000" height="555" alt="Poissons mis à sécher sur une perche de bambou" loading="lazy" decoding="async"><span class="k">D</span><h3>Développement communautaire et économie responsable</h3><p>Renforcer les capacités productives et l’autonomie des communautés en préservant les ressources.</p></a>
+      <a class="area" href="missions/#numerique"><img src="assets/img/presse-ancienne-m.jpg" srcset="assets/img/presse-ancienne-m.jpg 1000w, assets/img/presse-ancienne-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="Ancienne presse mécanique sous abri" loading="lazy" decoding="async"><span class="k">E</span><h3>Documentation numérique, création et communication</h3><p>Archives, récits, photographies et vidéos, diffusés lorsque les détenteurs de savoirs l’autorisent.</p></a>
+      <a class="area" href="missions/#rencontre"><img src="assets/img/toiture-dialogue-m.jpg" srcset="assets/img/toiture-dialogue-m.jpg 1000w, assets/img/toiture-dialogue-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="962" height="1000" alt="Travail partagé sur une paroi en feuilles tressées" loading="lazy" decoding="async"><span class="k">F</span><h3>Rencontre interculturelle</h3><p>Hasina Immersion : une médiation culturelle et communautaire, non une offre de séjours.</p></a>
+    </div>
   </div>
 </section>
 
-<section class="band">
+<section class="band" id="initiatives">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow"><b>03</b><span>Projets</span></p>
-      <h2>Des initiatives concrètes, présentées à leur juste état d’avancement.</h2>
+      <p class="eyebrow"><b>04</b><span>Nos initiatives</span></p>
+      <h2>Des projets concrets, présentés à leur juste état d’avancement.</h2>
       <p>Nous distinguons toujours ce qui est prévu de ce qui est réalisé. Chaque fiche indique son statut, son territoire et sa date de mise à jour.</p>
     </div>
-    <div class="projects">
-      <a class="project reveal" href="projet-ressources-vegetales/">
+    <a class="feature reveal" href="hasina/">
+      <img src="assets/img/repas-partage-m.jpg" srcset="assets/img/repas-partage-m.jpg 1000w, assets/img/repas-partage-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="1000" height="690" alt="Repas partagé dans des feuilles, assis au sol" loading="lazy" decoding="async">
+      <div class="feature-text">
+        <span class="status s-cours">En cours · depuis 2025</span>
+        <h3>Hasina Immersion</h3>
+        <p class="feature-sub">Rencontres interculturelles, patrimoine vivant et dialogue communautaire.</p>
+        <p>Depuis 2025, Hasina Immersion associe rencontres interculturelles, documentation du patrimoine vivant et collaborations communautaires. L’initiative a accueilli six volontaires internationaux participant à sa cocréation et développé des activités avec des gardiens des traditions, des familles et des maisons d’hôtes locales.</p>
+        <p class="meta">Maroantsetra et environs</p>
+        <span class="link">Découvrir Hasina Immersion</span>
+      </div>
+    </a>
+    <div class="cards">
+      <a class="card reveal" href="projet-ressources-vegetales/">
         <img src="assets/img/pirogue-roseaux-m.jpg" srcset="assets/img/pirogue-roseaux-m.jpg 1000w, assets/img/pirogue-roseaux-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="Pirogue amarrée dans une zone humide herbeuse" loading="lazy" decoding="async">
-        <div>
-          <span class="status s-preparation">En préparation</span>
-          <h3>Penja, Raphia et Ravinala : protéger les plantes qui font l’artisanat et l’habitat</h3>
-          <p>Cartographie participative, pépinières, replantation et valorisation responsable des ressources végétales des zones humides de la baie d’Antongil.</p>
-          <dl><dt>Territoire</dt><dd>Ankofabe, Sahasindro, Antanambe</dd><dt>Cadre</dt><dd>Programme de microfinancements du FEM (GEF SGP, OP8)</dd><dt>Mise à jour</dt><dd>Octobre 2026</dd></dl>
-        </div>
+        <span class="status s-preparation">En préparation</span>
+        <h3>Penja, Raphia et Ravinala</h3>
+        <p>Préservation et restauration des ressources végétales traditionnelles utilisées dans l’artisanat et l’habitat, dans les zones humides de la baie d’Antongil.</p>
+        <p class="meta">Ankofabe, Sahasindro, Antanambe · GEF SGP OP8</p>
       </a>
-      <a class="project reveal" href="ferme/">
+      <a class="card reveal" href="ferme/">
         <img src="assets/img/terre-laterite-m.jpg" srcset="assets/img/terre-laterite-m.jpg 1000w, assets/img/terre-laterite-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="Terrain de latérite défriché sur une pente herbeuse" loading="lazy" decoding="async">
-        <div>
-          <span class="status s-preparation">En préparation</span>
-          <h3>Ferme communautaire LAOVA : produire, apprendre, transmettre</h3>
-          <p>Un noyau agro-pastoral construit par étapes, appelé à devenir un lieu d’apprentissage autour de la terre, des animaux, de l’eau et des savoir-faire ruraux.</p>
-          <dl><dt>Territoire</dt><dd>Maroantsetra</dd><dt>Phase</dt><dd>A — noyau productif</dd><dt>Mise à jour</dt><dd>Octobre 2026</dd></dl>
-        </div>
-      </a>
-      <a class="project reveal" href="hasina/">
-        <img src="assets/img/repas-partage-m.jpg" srcset="assets/img/repas-partage-m.jpg 1000w, assets/img/repas-partage-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="1000" height="690" alt="Repas partagé dans des feuilles, assis au sol" loading="lazy" decoding="async">
-        <div>
-          <span class="status s-cours">En cours</span>
-          <h3>Hasina Immersion : rencontrer, comprendre, partager</h3>
-          <p>Des rencontres personnalisées avec LAOVA et son réseau, construites à partir des intérêts de chacun et des choix explicites des interlocuteurs locaux.</p>
-          <dl><dt>Territoire</dt><dd>Maroantsetra et environs</dd><dt>Forme</dt><dd>Sur demande, au cas par cas</dd><dt>Mise à jour</dt><dd>Octobre 2026</dd></dl>
-        </div>
+        <span class="status s-preparation">En préparation · phase A</span>
+        <h3>Ferme communautaire LAOVA</h3>
+        <p>Un développement agro-pastoral progressif, associant apprentissage pratique et transmission des savoirs ruraux.</p>
+        <p class="meta">Maroantsetra</p>
       </a>
     </div>
-    <div class="links"><a class="link" href="projets/">Tous les projets et leur méthode</a></div>
+    <div class="links"><a class="link" href="projets/">Tous les projets et réalisations</a></div>
+  </div>
+</section>
+
+<section id="methode">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><b>05</b><span>Comment LAOVA agit</span></p>
+      <h2>Une méthode simple, du dialogue à la transmission.</h2>
+      <p>Nos interventions suivent les principes inscrits dans nos statuts et notre dossier institutionnel.</p>
+    </div>
+    <ol class="method">
+      <li><span class="k">01</span><h3>Écouter et définir ensemble</h3><p>Les communautés participent à la définition des initiatives qui les concernent. Chaque démarche part des besoins exprimés et des capacités réelles.</p></li>
+      <li><span class="k">02</span><h3>Mobiliser les bonnes compétences</h3><p>Selon la mission : personnes ressources, chercheurs, techniciens, artisans, agriculteurs, éducateurs et partenaires.</p></li>
+      <li><span class="k">03</span><h3>Documenter avec consentement</h3><p>Recherche, témoignages, photographie et archives numériques, réalisés et diffusés avec l’accord des détenteurs de savoirs.</p></li>
+      <li><span class="k">04</span><h3>Agir et transmettre</h3><p>Restauration des ressources, initiatives productives, apprentissages entre générations et rencontres interculturelles.</p></li>
+      <li><span class="k">05</span><h3>Rendre compte honnêtement</h3><p>Objectifs et résultats sont présentés séparément ; rien n’est annoncé comme réalisé sur la seule base d’un plan ou d’un budget.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="realisations">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><b>06</b><span>Réalisations documentées</span></p>
+      <h2>Ce que LAOVA a déjà mené à bien.</h2>
+      <p>Des initiatives achevées, distinctes des projets encore en développement.</p>
+    </div>
+    <div class="projects">
+      <article class="project project-past reveal">
+        <div class="year">2023</div>
+        <div>
+          <span class="status s-acheve">Achevé</span>
+          <h3>Festival TODIKY</h3>
+          <p>Première édition organisée à Maroantsetra sur trois jours, ayant rassemblé plus de 2 000 personnes du district. Activités réalisées : carnaval, expositions culturelles et artisanales, jeux traditionnels, représentations artistiques, soirée Vakodrazagna, séquence Maroa Talenta et concert.</p>
+        </div>
+      </article>
+      <article class="project project-past reveal">
+        <div class="year">2022</div>
+        <div>
+          <span class="status s-acheve">Achevé</span>
+          <h3>Maroa Talenta</h3>
+          <p>Initiative de découverte et de documentation des chants, danses, musiques traditionnelles et talents émergents dans dix communes du district de Maroantsetra, pour préserver la mémoire artistique et soutenir la transmission culturelle.</p>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
 <section id="territoire">
   <div class="wrap">
     <div class="map-block">
-      <div class="reveal"><svg viewBox="0 0 500 650" role="img" aria-labelledby="map-t map-d">
+      <div class="reveal"><svg viewBox="0 0 545 650" role="img" aria-labelledby="map-t map-d">
   <title id="map-t">Carte de situation de la Plateforme LAOVA</title>
   <desc id="map-d">Madagascar, avec Maroantsetra au fond de la baie d’Antongil, au nord-est de l’île.</desc>
   <defs>
@@ -206,16 +262,16 @@
     <line x1="0" y1="-3" x2="0" y2="3" stroke="#221D17"/><line x1="44" y1="-3" x2="44" y2="3" stroke="#221D17"/>
     <text x="0" y="16">≈ 100 km</text>
   </g>
-  <g transform="translate(460 40)" font-family="IBM Plex Mono, monospace" font-size="9" fill="#221D17" text-anchor="middle">
+  <g transform="translate(505 40)" font-family="IBM Plex Mono, monospace" font-size="9" fill="#221D17" text-anchor="middle">
     <line x1="0" y1="18" x2="0" y2="-4" stroke="#221D17"/><path d="M-4 2 L0 -8 L4 2 Z" fill="#221D17"/><text y="32">N</text>
   </g>
 </svg></div>
       <div>
-        <p class="eyebrow"><b>04</b><span>Territoire</span></p>
+        <p class="eyebrow"><b>07</b><span>Notre territoire</span></p>
         <h2>Un ancrage local, une vocation nationale, une ouverture internationale.</h2>
         <p class="lede" style="margin-top:24px">LAOVA est implantée à Maroantsetra, au fond de la baie d’Antongil. Ce territoire permet de comprendre concrètement les liens entre biodiversité, ressources végétales, habitat, artisanat, agriculture, patrimoine oral et communautés.</p>
-        <p class="muted">Nos statuts portent sur les patrimoines de Madagascar dans leur ensemble ; nos interventions, elles, sont toujours localisées avec précision.</p>
-        <figure class="ratio-wide"><img src="assets/img/lagune-m.jpg" srcset="assets/img/lagune-m.jpg 1000w, assets/img/lagune-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="1000" height="622" alt="Lagune et pirogues échouées, en bordure de la baie d’Antongil" loading="lazy" decoding="async"><figcaption><span class="fig-n">Fig. 05</span><span>Lagune et pirogues échouées, en bordure de la baie d’Antongil — 2026</span></figcaption></figure>
+        <p class="muted">Nos statuts portent sur les patrimoines de Madagascar dans leur ensemble ; nos interventions, elles, sont toujours localisées avec précision. À l’international, nous développons des coopérations entre acteurs responsables, jamais une tutelle extérieure.</p>
+        <figure class="ratio-wide"><img src="assets/img/lagune-m.jpg" srcset="assets/img/lagune-m.jpg 1000w, assets/img/lagune-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="1000" height="622" alt="Lagune et pirogues échouées, en bordure de la baie d’Antongil" loading="lazy" decoding="async"><figcaption><span class="fig-n">Fig. 04</span><span>Lagune et pirogues échouées, en bordure de la baie d’Antongil — 2026</span></figcaption></figure>
       </div>
     </div>
     <div class="grid" style="margin-top:56px;align-items:end">
@@ -229,28 +285,19 @@
   </div>
 </section>
 
-<section class="section-tight">
+<section class="band" id="recits">
   <div class="wrap">
-    <div class="doors">
-      <a class="door reveal" href="ferme/">
-        <img src="assets/img/riziere-repiquage-m.jpg" srcset="assets/img/riziere-repiquage-m.jpg 1000w, assets/img/riziere-repiquage-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="Repiquage du riz dans une parcelle inondée" loading="lazy" decoding="async">
-        <div class="door-text">
-          <span class="meta">Projet phare · Éducation</span>
-          <h3>Découvrir la ferme communautaire</h3>
-          <p>Une ferme qui produit, transmet et apprend avec son territoire.</p>
-          <span class="link">Le projet et ses étapes</span>
-        </div>
-      </a>
-      <a class="door reveal" href="hasina/">
-        <img src="assets/img/pirogue-baie-m.jpg" srcset="assets/img/pirogue-baie-m.jpg 1000w, assets/img/pirogue-baie-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="1000" height="900" alt="Proue d’une pirogue sur la baie, ciel couvert" loading="lazy" decoding="async">
-        <div class="door-text">
-          <span class="meta">Rencontre interculturelle</span>
-          <h3>Rencontrer LAOVA avec Hasina Immersion</h3>
-          <p>Un territoire ne se résume pas à ses paysages. Il se découvre dans les gestes et les personnes.</p>
-          <span class="link">Notre démarche</span>
-        </div>
-      </a>
+    <div class="sec-head">
+      <p class="eyebrow"><b>08</b><span>Récits &amp; ressources</span></p>
+      <h2>Regarder avant de raconter.</h2>
+      <p>Un carnet de terrain photographique de l’été 2026, en attendant les récits et archives documentés avec les personnes concernées.</p>
     </div>
+    <div class="cards cards-3">
+      <a class="card reveal" href="recits/#carnet"><img src="assets/img/poisson-fume-m.jpg" srcset="assets/img/poisson-fume-m.jpg 1000w, assets/img/poisson-fume-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="1000" height="570" alt="Poisson fumé sur une claie au-dessus d’un feu" loading="lazy" decoding="async"><p class="meta">Carnet de terrain · 2026</p><h3>Fumer et sécher le poisson</h3><p>Techniques de conservation le long de la baie d’Antongil.</p></a>
+      <a class="card reveal" href="recits/#carnet"><img src="assets/img/charpente-collective-m.jpg" srcset="assets/img/charpente-collective-m.jpg 1000w, assets/img/charpente-collective-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="750" height="1000" alt="Charpente en bois montée collectivement" loading="lazy" decoding="async"><p class="meta">Carnet de terrain · 2026</p><h3>Bâtir ensemble</h3><p>Charpentes de bois et couvertures végétales autour de Maroantsetra.</p></a>
+      <a class="card reveal" href="recits/#archives"><img src="assets/img/palmier-nb-m.jpg" srcset="assets/img/palmier-nb-m.jpg 1000w, assets/img/palmier-nb-l.jpg 2000w" sizes="(max-width: 860px) 100vw, 60vw" width="1000" height="630" alt="Marée basse, pirogues alignées sur la grève" loading="lazy" decoding="async"><p class="meta">À paraître</p><h3>Maroa Talenta, TODIKY, Hasina</h3><p>Archives et récits en préparation, publiés avec les autorisations nécessaires.</p></a>
+    </div>
+    <div class="links"><a class="link" href="recits/">Tous les récits et ressources</a></div>
   </div>
 </section>
 
@@ -258,13 +305,13 @@
   <div class="wrap">
     <div class="grid">
       <div class="c-1-7">
-        <p class="eyebrow"><b>05</b><span>Coopérer</span></p>
+        <p class="eyebrow"><b>09</b><span>Coopérer avec LAOVA</span></p>
         <h2>Construisons des coopérations utiles et respectueuses.</h2>
       </div>
       <div class="c-8-12">
-        <p class="lede" style="color:inherit">Universités, fondations, acteurs éducatifs, associations, professionnels et institutions : LAOVA est ouverte au dialogue avec celles et ceux qui partagent son engagement pour les patrimoines et les communautés.</p>
+        <p class="lede" style="color:inherit">Universités, fondations, chercheurs, acteurs éducatifs, professionnels et partenaires institutionnels : LAOVA est ouverte au dialogue avec celles et ceux qui partagent son engagement pour les patrimoines et les communautés.</p>
         <p class="muted">Une coopération entre acteurs responsables, jamais une tutelle extérieure.</p>
-        <div class="links"><a class="link" href="cooperer/">Proposer une collaboration</a><a class="link" href="contact/">Écrire à l’équipe</a></div>
+        <div class="links"><a class="btn btn-light" href="cooperer/">Proposer une coopération →</a><a class="link" href="contact/">Écrire à l’équipe</a></div>
       </div>
     </div>
   </div>
@@ -312,6 +359,6 @@
   </div>
 </footer>
 <a class="wa" href="https://wa.me/261325065886?text=Bonjour%2C%20je%20souhaite%20%C3%A9changer%20avec%20l%E2%80%99%C3%A9quipe%20LAOVA." target="_blank" rel="noopener" title="Discuter avec un membre de l’équipe sur WhatsApp" aria-label="Discuter avec un membre de l’équipe sur WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4C9.4 4 4 9.1 4 15.4c0 2.3.7 4.4 2 6.2L4.6 27l5.6-1.5c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.1 12-11.5S22.6 4 16 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12.2 10.6c.3 0 .6 0 .8.6l.9 2.1c.1.3 0 .6-.2.8l-.7.8c-.2.2-.2.4 0 .7.9 1.5 2.1 2.6 3.7 3.3.3.1.5.1.7-.1l.9-1c.2-.3.5-.3.8-.2l2.1 1c.3.1.5.3.5.6 0 .9-.6 2-1.6 2.3-1 .3-2.4.2-4.3-.7-2.6-1.2-4.4-3.6-5-4.9-.6-1.2-.7-2.6 0-3.6.4-.6 1-1 1.4-1.1z" fill="currentColor"/></svg><span>Écrire à l’équipe</span></a>
-<script src="assets/js/laova.js?v=4d0eb027" defer></script>
+<script src="assets/js/laova.js?v=d1431da1" defer></script>
 </body>
 </html>

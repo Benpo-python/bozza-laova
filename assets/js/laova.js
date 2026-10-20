@@ -18,6 +18,23 @@ var T = EN
   });
 })();
 
+/* Sous-menus : ouverture au clic et au clavier, fermeture par Échap ou clic extérieur */
+(function submenus() {
+  var parents = document.querySelectorAll('.nav-parent');
+  function closeAll(except) {
+    parents.forEach(function (b) { if (b !== except) b.setAttribute('aria-expanded', 'false'); });
+  }
+  parents.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var open = b.getAttribute('aria-expanded') === 'true';
+      closeAll(b);
+      b.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.nav-group')) closeAll(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
+})();
+
 (function reveal() {
   var els = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
@@ -81,6 +98,21 @@ var T = EN
       box.innerHTML = '';
       box.appendChild(f);
       box.classList.add('is-loaded');
+    });
+  });
+})();
+
+/* Page Projets : filtre par statut */
+(function filters() {
+  var chips = document.querySelectorAll('.filters .chip');
+  if (!chips.length) return;
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      var f = c.dataset.filter;
+      chips.forEach(function (x) { var on = x === c; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      document.querySelectorAll('.project[data-status]').forEach(function (p) { p.hidden = !(f === 'all' || p.dataset.status === f); });
+      var label = document.querySelector('.past-label');
+      if (label) label.hidden = !(f === 'all' || f === 'acheve');
     });
   });
 })();

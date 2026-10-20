@@ -536,3 +536,126 @@ body.menu-open .wa { display: none; }
 
 /* Fiches d'initiatives passées (sans photo) */
 .project-past .year { font-size: clamp(3.5rem, 2rem + 5vw, 7rem); line-height: .9; color: var(--ravinala); font-style: italic; }
+
+/* ——— Menu à sous-rubriques ——— */
+.nav { gap: clamp(10px, 1.3vw, 22px); }
+.nav-link, .nav-parent {
+  font-family: var(--sans); font-size: .88rem; color: var(--ink-2); text-decoration: none;
+  background: none; border: 0; border-bottom: 1px solid transparent; padding: 6px 0; cursor: pointer;
+}
+.nav-link:hover, .nav-parent:hover { color: var(--ink); border-bottom-color: var(--line-strong); }
+.nav-link[aria-current="page"], .nav-group.is-current > .nav-parent { color: var(--ink); border-bottom-color: var(--raffia); }
+.nav-parent::after { content: ""; display: inline-block; width: 5px; height: 5px; margin-left: 7px; border-right: 1.2px solid currentColor; border-bottom: 1.2px solid currentColor; transform: translateY(-3px) rotate(45deg); }
+.nav-group { position: relative; }
+.nav-sub {
+  position: absolute; top: calc(100% + 10px); left: -16px; min-width: 250px; z-index: 35;
+  background: var(--paper); border: 1px solid var(--line); box-shadow: 0 16px 40px rgba(34, 29, 23, .1);
+  padding: 8px 0; display: none;
+}
+.nav-sub::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
+.nav-sub a { display: block; padding: 9px 16px; font-family: var(--sans); font-size: .9rem; color: var(--ink-2); text-decoration: none; border: 0; }
+.nav-sub a:hover, .nav-sub a:focus-visible { background: var(--paper-2); color: var(--ink); }
+.nav-group-cta > .nav-parent { background: var(--ravinala); color: var(--paper); padding: 8px 14px; border: 0; }
+.nav-group-cta > .nav-parent:hover, .nav-group-cta.is-current > .nav-parent { background: var(--ravinala-d); color: var(--paper); border: 0; }
+.nav-group-cta .nav-sub { left: auto; right: 0; min-width: 190px; }
+@media (min-width: 1081px) {
+  .nav-group:hover .nav-sub, .nav-group:focus-within .nav-sub, .nav-parent[aria-expanded="true"] + .nav-sub { display: block; }
+}
+@media (max-width: 1080px) {
+  .nav-link, .nav-parent { font-family: var(--serif); font-size: 1.5rem; color: var(--ink); width: 100%; text-align: left; padding: 10px 0; border-bottom: 1px solid var(--line); cursor: default; }
+  .nav-parent::after { display: none; }
+  .nav-group { width: 100%; }
+  .nav-group-cta > .nav-parent { background: none; color: var(--ink); padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .nav-sub { position: static; display: block; box-shadow: none; border: 0; background: none; padding: 4px 0 10px 14px; min-width: 0; }
+  .nav-sub::before { display: none; }
+  .nav-sub a { font-size: 1.02rem; padding: 7px 0; color: var(--ink-2); }
+}
+
+/* ——— Accueil : composants de la refonte ——— */
+.links .btn { font-size: .95rem; }
+.btn-light { background: var(--paper); color: var(--ravinala-d); }
+.btn-light:hover { background: #fff; color: var(--ravinala-d); }
+
+.glance { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 28px; }
+.glance li { font-size: 1.02rem; line-height: 1.4; padding-top: 12px; border-top: 1px solid var(--line-strong); }
+.glance span { display: block; font-family: var(--mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--raffia-d); margin-bottom: 4px; }
+@media (max-width: 640px) { .glance { grid-template-columns: 1fr; } }
+
+/* Alternance image / texte */
+.zig { display: grid; grid-template-columns: 6fr 5fr; gap: clamp(28px, 5vw, 80px); align-items: center; }
+.zig + .zig { margin-top: clamp(56px, 7vw, 100px); }
+.zig-rev > figure { order: 2; }
+.zig-text h3 { font-size: var(--step-2); margin: 12px 0 18px; }
+.zig-text p { color: var(--ink-2); }
+@media (max-width: 860px) { .zig { grid-template-columns: 1fr; } .zig-rev > figure { order: 0; } }
+
+/* Six domaines */
+.areas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 28px; }
+.area { text-decoration: none; display: block; }
+.area img { aspect-ratio: 4 / 3; object-fit: cover; margin-bottom: 16px; transition: opacity .3s ease; }
+.area:hover img { opacity: .85; }
+.area .k { font-family: var(--mono); font-size: .75rem; color: var(--raffia-d); }
+.area h3 { font-size: 1.4rem; margin: 6px 0 8px; }
+.area:hover h3 { color: var(--laterite); }
+.area p { font-size: 1rem; color: var(--ink-2); margin: 0; }
+@media (max-width: 960px) { .areas { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .areas { grid-template-columns: 1fr; } }
+
+/* Initiative à la une */
+.feature { display: grid; grid-template-columns: 7fr 5fr; gap: 0; background: var(--paper); text-decoration: none; border: 1px solid var(--line); }
+.feature img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; }
+.feature-text { padding: clamp(24px, 4vw, 52px); display: flex; flex-direction: column; gap: 4px; justify-content: center; }
+.feature-text h3 { font-size: var(--step-3); margin: 12px 0 6px; }
+.feature-sub { font-style: italic; font-size: 1.15rem; color: var(--laterite); }
+.feature-text p { color: var(--ink-2); }
+.feature:hover h3 { color: var(--laterite); }
+@media (max-width: 860px) { .feature { grid-template-columns: 1fr; } .feature img { min-height: 0; aspect-ratio: 3 / 2; } }
+
+/* Cartes */
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; }
+.cards-3 { grid-template-columns: repeat(3, 1fr); margin-top: 0; }
+.card { display: flex; flex-direction: column; gap: 6px; text-decoration: none; background: var(--paper); border: 1px solid var(--line); padding: 0 0 24px; }
+.card img { aspect-ratio: 3 / 2; object-fit: cover; margin-bottom: 14px; }
+.card > :not(img) { padding: 0 22px; }
+.card h3 { font-size: 1.45rem; margin: 6px 0 4px; }
+.card p { font-size: 1rem; color: var(--ink-2); margin: 0; }
+.card .meta { margin-top: auto; padding-top: 8px; }
+.card:hover h3 { color: var(--laterite); }
+@media (max-width: 860px) { .cards, .cards-3 { grid-template-columns: 1fr; } }
+
+/* Méthode */
+.method { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 1px solid var(--ink); }
+.method li { padding: 20px 20px 0 0; }
+.method li + li { padding-left: 20px; border-left: 1px solid var(--line); }
+.method .k { font-family: var(--mono); font-size: .75rem; color: var(--raffia-d); }
+.method h3 { font-size: 1.25rem; margin: 10px 0 8px; }
+.method p { font-size: .98rem; color: var(--ink-2); margin: 0; }
+@media (max-width: 960px) {
+  .method { grid-template-columns: 1fr; }
+  .method li, .method li + li { padding: 18px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+}
+
+/* Filtres de statut */
+.filters { gap: 10px; }
+.chip { font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; background: none; border: 1px solid var(--line-strong); color: var(--ink-2); padding: 8px 12px; cursor: pointer; }
+.chip:hover { border-color: var(--ink); color: var(--ink); }
+.chip.is-on { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.project[hidden], .past-label[hidden] { display: none !important; }
+
+/* Bandeau photo pleine largeur */
+.wide-photo { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.wide-photo img { aspect-ratio: 21 / 9; object-fit: cover; }
+
+/* Hasina Immersion : identité propre (accent latérite), dans l’univers LAOVA */
+.theme-hasina .page-head h1 { color: var(--ink); }
+.theme-hasina .eyebrow b, .theme-hasina figcaption .fig-n { color: var(--laterite); }
+.theme-hasina .verbs b { color: var(--laterite); }
+.theme-hasina .band { background: #EFE2D6; }
+.theme-hasina .steps { border-top-color: var(--laterite); }
+.theme-hasina .steps .k { color: var(--laterite); }
+.theme-hasina .btn { background: var(--laterite); }
+.theme-hasina .btn:hover { background: #7f3720; }
+.theme-hasina .checks label:has(input:checked) { background: var(--laterite); border-color: var(--laterite); }
+.theme-hasina .page-head .lede { font-style: italic; }
+.target b { white-space: nowrap; }
+@media (max-width: 1080px) { .nav .nav-link { font-size: 1.5rem; padding: 10px 0; } }
